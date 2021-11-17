@@ -1,6 +1,6 @@
 <?php
 /*
- * Website: https://nam.name.vn/ 
+ * Website: https://nam.name.vn/ https://simsimi.info/api/?lc=vn&text=
 */
 
 require('Chatfuel.php');
@@ -9,7 +9,7 @@ $chatfuel = new Chatfuel(TRUE);
 if(isset($_GET['text']))
 {
 	$hoi = $_GET['text'];
-        $response =  file_get_contents("http://ghuntur.com/simsim.php?lc=vn&deviceId=&bad=0&txt=".urlencode($hoi));
+        $response =  file_get_contents("https://simsimi.info/api/?lc=vn&text=".urlencode($hoi));
 $dap = isset($response)?$response:null;
 if($dap != null)
 {
